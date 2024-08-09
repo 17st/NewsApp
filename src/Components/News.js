@@ -24,8 +24,8 @@ const News = (props) => {
     props.setProgress(30);
     let parsedData = await data.json();
     props.setProgress(70);
-    setArticles(parsedData.articles);
-    setTotalResults(parsedData.totalResults);
+    setArticles(parsedData.articles || []);
+    setTotalResults(parsedData.totalResults || 0);
     setLoading(false)
     props.setProgress(100);
   }
@@ -41,8 +41,8 @@ const News = (props) => {
     setPage(page + 1)
     let data = await fetch(url);
     let parsedData = await data.json();
-    setArticles(articles.concat(parsedData.articles))
-    setTotalResults(parsedData.totalResults)
+    setArticles(articles.concat(parsedData.articles || []))
+    setTotalResults(parsedData.totalResults || 0)
   };
 
     return (
