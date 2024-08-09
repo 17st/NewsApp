@@ -14,7 +14,7 @@ const App = () => {
 
     return (
       <div>
-        <Router basename="/NewsApp">
+        <Router basename="https://Sapna.github.io/NewsApp">
         <Navbar/>
         <LoadingBar
         height={3}
