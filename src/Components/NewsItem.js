@@ -1,7 +1,7 @@
 import React from "react";
 
 const NewsItem = (props) => {
-  let { title, description, imageUrl, newsUrl, author, date, source } = props;
+  let { title, description, urlToImage, newsUrl, author, date, source } = props;
   return (
     <div className="my-3">
       <div className="card">
@@ -17,7 +17,7 @@ const NewsItem = (props) => {
         </div>
         <img
           src={
-            !imageUrl ? "https://content3.jdmagicbox.com/comp/def_content/newspaper_advertising_agencies/default-newspaper-advertising-agencies-0.jpg": imageUrl
+            !urlToImage ? "https://content3.jdmagicbox.com/comp/def_content/newspaper_advertising_agencies/default-newspaper-advertising-agencies-0.jpg": urlToImage
           }
           className="card-img-top"
           alt="..."
